@@ -1,0 +1,178 @@
+# Project Prompt
+
+Build a modern, responsive corporate website for **Druk Enviroklenes Pvt. Ltd.**, a Bhutanese ferroalloy manufacturing company.
+
+## Technology Stack
+
+Use the following technologies only:
+
+* React 18
+* Vite
+* TypeScript
+* Tailwind CSS
+* Supabase
+* React Router DOM
+* React Hook Form
+* Zod for form validation
+* TanStack Query (React Query) for server state
+* Framer Motion (minimal animations only)
+* Lucide React for icons
+
+## Package Manager
+
+Use **npm** as the package manager.
+
+The project must:
+
+* be created with Vite using the React + TypeScript template
+* include a `package-lock.json`
+* use **npm install**
+* run with **npm run dev**
+* never use pnpm, yarn, or bun
+
+## Backend
+
+Do **not** use:
+
+* Express
+* Node backend
+* Firebase
+* Next.js API routes
+* Any custom backend
+
+Use **Supabase only** for:
+
+* Authentication
+* PostgreSQL Database
+* Storage
+
+## Design
+
+Create a premium corporate industrial design.
+
+Theme:
+
+* Dark green primary color
+* White and gray typography
+* Glassmorphism cards
+* Soft shadows
+* Rounded corners
+* Professional business appearance
+* Modern industrial aesthetic
+* Minimal Framer Motion animations
+* Fully responsive
+* Mobile-first design
+
+## Public Website
+
+Create these pages:
+
+* Home
+* About
+* Products
+* Announcements
+* Careers
+* Contact
+
+Use placeholder content and placeholder images that can easily be replaced later.
+
+## Admin Portal
+
+Create a secure admin portal protected by Supabase Email Authentication.
+
+Include:
+
+* Login
+* Dashboard
+* Product Management (CRUD)
+* Announcement Management (CRUD)
+* Career Management (CRUD)
+* Company Information Editor
+* Image Upload using Supabase Storage
+
+## Database
+
+Design normalized Supabase tables for:
+
+* products
+* announcements
+* careers
+* company_information
+
+Generate appropriate TypeScript types.
+
+## Architecture
+
+Use a clean, scalable feature-based architecture.
+
+Example:
+
+```
+src/
+ ├── assets/
+ ├── components/
+ │     ├── ui/
+ │     ├── layout/
+ │     └── common/
+ ├── features/
+ │     ├── auth/
+ │     ├── products/
+ │     ├── announcements/
+ │     ├── careers/
+ │     └── company/
+ ├── hooks/
+ ├── lib/
+ ├── services/
+ ├── pages/
+ ├── routes/
+ ├── types/
+ ├── utils/
+ └── App.tsx
+```
+
+Requirements:
+
+* Modular components
+* Reusable UI
+* Type-safe code
+* Service layer for Supabase
+* Custom hooks
+* Environment variables for Supabase credentials
+* Easy to maintain
+* Easy to extend
+
+## Code Quality
+
+* Keep components small and reusable.
+* Avoid duplicated code.
+* Follow React best practices.
+* Use TypeScript interfaces and types.
+* Keep the code simple and readable.
+* Add comments only where helpful.
+* Do not over-engineer the project.
+
+## Deliverables
+
+Generate a complete production-ready project including:
+
+* Vite configuration
+* Tailwind configuration
+* TypeScript configuration
+* React Router setup
+* Supabase client configuration
+* Authentication flow
+* CRUD pages
+* Responsive layouts
+* Placeholder assets
+* Loading states
+* Empty states
+* Error handling
+
+The final project should be ready to install using:
+
+```bash
+npm install
+npm run dev
+```
+
+and should be easily deployable to Vercel or Netlify without any backend server.

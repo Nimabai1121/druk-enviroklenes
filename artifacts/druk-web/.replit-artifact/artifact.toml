@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Druk Enviroklenes"
+version = "1.0.0"
+id = "artifacts/druk-web"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18637
+
+[services.development]
+run = "pnpm --filter @workspace/druk-web run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/druk-web", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/druk-web/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18637"
+BASE_PATH = "/"
