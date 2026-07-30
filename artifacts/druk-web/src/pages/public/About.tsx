@@ -10,6 +10,7 @@ const aboutImages = [
   '/image/ed.jpeg',
   '/image/plant.jpg',
   '/image/station.jpeg',
+  
 ];
 
 export default function About() {
