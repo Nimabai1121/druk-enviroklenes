@@ -13,6 +13,7 @@ export interface Announcement {
   title: string;
   content: string;
   excerpt: string | null;
+  images: string[];  // NEW: Array of image URLs
   published_at: string | null;
   is_published: boolean;
   created_at: string;
@@ -26,6 +27,10 @@ export interface Career {
   type: 'full-time' | 'part-time' | 'contract';
   description: string;
   is_active: boolean;
+  deadline?: string | null; // NEW: Application deadline
+  attachment_url?: string | null;  // NEW: URL to the uploaded document
+  attachment_name?: string | null; // NEW: Original filename
+
   created_at: string;
 }
 

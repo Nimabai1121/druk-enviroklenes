@@ -11,6 +11,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
+import { useState } from 'react';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name is required'),
@@ -24,19 +25,58 @@ type ContactFormValues = z.infer<typeof contactSchema>;
 export default function Contact() {
   const { data: company } = useCompanyInfo();
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: { name: '', email: '', subject: '', message: '' }
   });
 
-  const onSubmit = (data: ContactFormValues) => {
-    console.log("Contact form submission:", data);
-    toast({
-      title: "Message sent",
-      description: "Thank you for contacting us. We will get back to you shortly.",
-    });
-    form.reset();
+  // Web3Forms configuration
+  const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
+  const ACCESS_KEY = 'd6ecccca-ec81-49cb-a179-05b21f2a67db';
+
+  const onSubmit = async (data: ContactFormValues) => {
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch(WEB3FORMS_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: ACCESS_KEY,
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+          // botcheck is not required but helps prevent spam
+          // botcheck: false, // Remove comment to enable captcha
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for contacting us. We will get back to you shortly.",
+        });
+        form.reset();
+      } else {
+        throw new Error(result.message || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Web3Forms Error:', error);
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -64,7 +104,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-medium text-foreground mb-1">Address</h3>
                     <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                      {company?.address || 'Pasakha Industrial Estate\nPhuentsholing, Bhutan'}
+                      {company?.address || 'Norbugang Industrial Park\nSamtse, Bhutan'}
                     </p>
                   </div>
                 </div>
@@ -75,7 +115,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-medium text-foreground mb-1">Phone</h3>
-                    <p className="text-muted-foreground">{company?.phone || '+975 17 11 22 33'}</p>
+                    <p className="text-muted-foreground">{company?.phone || '05-365946'}</p>
                   </div>
                 </div>
 
@@ -91,12 +131,22 @@ export default function Contact() {
               </div>
             </GlassCard>
 
-            <div className="aspect-[16/9] rounded-xl overflow-hidden border border-border/50 bg-card/20 relative flex items-center justify-center">
-              {/* Map Placeholder */}
-              <div className="absolute inset-0 opacity-20 bg-[url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Bhutan_location_map.svg')] bg-cover bg-center mix-blend-luminosity"></div>
-              <div className="z-10 text-center">
-                <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                <span className="font-medium text-foreground uppercase tracking-widest text-sm">Pasakha, Bhutan</span>
+            <div className="aspect-[16/9] rounded-xl overflow-hidden border border-border/50 bg-card/20 relative">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1758.0123538262237!2d89.04955637529174!3d26.92099905764314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbt!4v1784885858468!5m2!1sen!2sbt"
+                width="600"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                className="absolute inset-0 h-full w-full border-0"
+              />
+              <div className="absolute bottom-4 left-4 right-4 z-10 rounded-lg border border-border/50 bg-background/80 backdrop-blur-md px-4 py-3">
+                <div className="flex items-center gap-2 text-foreground">
+                  <MapPin className="h-4 w-4 text-primary shrink-0" />
+                  <span className="font-medium text-sm uppercase tracking-wider">Norbugang Industrial Park, Samtse, Bhutan</span>
+                </div>
               </div>
             </div>
           </div>
@@ -104,6 +154,9 @@ export default function Contact() {
           {/* Contact Form */}
           <GlassCard className="p-8">
             <h2 className="font-display text-2xl tracking-wide text-foreground mb-6">Send an Inquiry</h2>
+            <p className="text-sm text-muted-foreground mb-6">
+              Fill in the form and we'll get back to you as soon as possible.
+            </p>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-2 gap-4">
@@ -111,7 +164,7 @@ export default function Contact() {
                     <FormItem className="col-span-2 sm:col-span-1">
                       <FormLabel>Full Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" className="bg-background/50" {...field} />
+                        <Input placeholder="Nima" className="bg-background/50" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -120,7 +173,7 @@ export default function Contact() {
                     <FormItem className="col-span-2 sm:col-span-1">
                       <FormLabel>Email Address</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="john@company.com" className="bg-background/50" {...field} />
+                        <Input type="email" placeholder="nima09@gmail.com" className="bg-background/50" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -144,8 +197,14 @@ export default function Contact() {
                     <FormMessage />
                   </FormItem>
                 )} />
-                <Button type="submit" className="w-full uppercase tracking-wider font-bold" size="lg">
-                  <Send className="mr-2 h-4 w-4" /> Send Message
+                <Button 
+                  type="submit" 
+                  className="w-full uppercase tracking-wider font-bold" 
+                  size="lg"
+                  disabled={isSubmitting}
+                >
+                  <Send className="mr-2 h-4 w-4" /> 
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </Form>

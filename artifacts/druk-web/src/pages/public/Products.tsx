@@ -85,17 +85,13 @@ export default function Products() {
                     <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">
                       {product.description}
                     </p>
-                    <div className="border-t border-border/50 pt-4 mt-auto">
-                      <button className="text-sm font-medium text-primary hover:text-primary/80 transition-colors uppercase tracking-wide">
-                        Request Quote & Spec Sheet
-                      </button>
-                    </div>
                   </div>
                 </GlassCard>
               </motion.div>
             ))}
           </div>
-        ) : (
+        ) : 
+        (
           <div className="text-center py-20 px-4 bg-card/20 rounded-xl border border-border/50">
             <Search className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
             <h3 className="text-xl font-medium text-foreground mb-2">No products found</h3>

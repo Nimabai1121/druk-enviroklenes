@@ -4,7 +4,7 @@ import * as companyService from '@/services/company';
 const placeholderCompany = {
   company_name: 'Druk Enviroklenes Pvt. Ltd.',
   tagline: 'Forging Bhutan\'s Industrial Future',
-  address: 'Pasakha Industrial Estate, Phuentsholing, Bhutan',
+  address: 'Norbugang Industrial Park\nSamtse, Bhutan',
   phone: '+975 17 11 22 33',
   email: 'contact@drukenviro.bt',
   founded_year: '2012',
@@ -17,7 +17,15 @@ export function useCompanyInfo() {
     queryFn: async () => {
       try {
         const data = await companyService.getCompanyInfo();
-        return Object.keys(data).length > 0 ? { ...placeholderCompany, ...data } : placeholderCompany;
+        const companyData = Object.keys(data).length > 0 ? { ...placeholderCompany, ...data } : placeholderCompany;
+        const normalizedAddress = companyData.address?.toLowerCase().includes('pasakha')
+          ? 'Norbugang Industrial Park\nSamtse, Bhutan'
+          : companyData.address;
+
+        return {
+          ...companyData,
+          address: normalizedAddress
+        };
       } catch (err) {
         return placeholderCompany;
       }

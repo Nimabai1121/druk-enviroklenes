@@ -8,7 +8,7 @@ export function Navbar() {
 
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
+    { href: '/about', label: 'About EDPL' },
     { href: '/products', label: 'Products' },
     { href: '/announcements', label: 'Announcements' },
     { href: '/careers', label: 'Careers' },
@@ -20,11 +20,16 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary/20 rounded-md flex items-center justify-center border border-primary/30">
-              <Factory className="h-6 w-6 text-primary" />
+            {/* Logo Container - Change size here */}
+            <div className="w-24 h-14 rounded-md overflow-hidden border border-primary/30 bg-sky-950 shrink-0 flex items-center justify-center">
+              <img 
+                src="/image/logo.jpg" 
+                alt="Exalt Druk Enviroklenes logo" 
+                className="h-[90%] w-[90%] object-contain" 
+              />
             </div>
             <div className="flex flex-col">
-              <span className="font-display text-2xl tracking-wide leading-none text-foreground">DRUK ENVIROKLENES</span>
+              <span className="font-display text-2xl tracking-wide leading-none text-foreground"> DRUK ENVIROKLENES</span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-medium">Pvt. Ltd.</span>
             </div>
           </Link>
