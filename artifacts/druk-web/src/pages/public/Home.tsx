@@ -147,10 +147,10 @@ export default function Home() {
                 className="text-center mb-8"
               >
                 <h1 className="font-display text-3xl tracking-wide text-foreground">
-                  DRUK ENVIROKLENES
+                  DRUK ENVIROKLENS 
                 </h1>
                 <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground font-medium mt-1">
-                  Pvt. Ltd.
+                  Private Limited
                 </p>
               </motion.div>
 

@@ -68,7 +68,7 @@ export default function About() {
                 <MapPin className="h-5 w-5 text-primary shrink-0" />
                 <span>Norbugang Industrial Park (NIP), Samtse, Bhutan</span>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-justify">
                 Exalt Druk Enviroklens Private Limited is a Bhutanese ferro silicon manufacturing company 
                 located at Norbugang Industrial Park (NIP), Samtse Dzongkhag. The company is engaged in 
                 the production and export of high-quality ferro silicon, a critical alloy used in the steel, 
@@ -149,7 +149,8 @@ export default function About() {
             </motion.div>
           </div>
         </section>
-          {/* Mission & Vision */}
+
+        {/* Mission & Vision */}
         <section className="py-16 bg-card/20 border-y border-border/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
@@ -158,7 +159,7 @@ export default function About() {
                   <Target className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="font-display text-2xl text-foreground mb-4">Mission</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-justify">
                   To produce high-quality ferro silicon through safe, efficient, and environmentally responsible operations while contributing to Bhutan's industrial development and economic growth.
                 </p>
               </GlassCard>
@@ -167,7 +168,7 @@ export default function About() {
                   <Award className="h-8 w-8 text-amber-500" />
                 </div>
                 <h3 className="font-display text-2xl text-foreground mb-4">Vision</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-justify">
                   To become one of the leading ferro alloy manufacturers in Bhutan and a trusted supplier of premium ferro silicon products in the regional market.
                 </p>
               </GlassCard>
@@ -191,7 +192,7 @@ export default function About() {
                   <div>
                     <div className="text-sm text-primary font-semibold uppercase tracking-wider">31 December 2025</div>
                     <h3 className="text-xl font-display text-foreground mt-1">First Ferro Silicon Furnace</h3>
-                    <p className="text-muted-foreground mt-2">Successful commissioning of the First Ferro Silicon Furnace, marking the commencement of commercial production.</p>
+                    <p className="text-muted-foreground mt-2 text-justify">Successful commissioning of the First Ferro Silicon Furnace, marking the commencement of commercial production.</p>
                   </div>
                 </div>
               </GlassCard>
@@ -203,14 +204,14 @@ export default function About() {
                   <div>
                     <div className="text-sm text-amber-500 font-semibold uppercase tracking-wider">March 2026</div>
                     <h3 className="text-xl font-display text-foreground mt-1">Second Ferro Silicon Furnace</h3>
-                    <p className="text-muted-foreground mt-2">Successful commissioning of the Second Ferro Silicon Furnace, substantially increasing the company's production capacity and operational efficiency.</p>
+                    <p className="text-muted-foreground mt-2 text-justify">Successful commissioning of the Second Ferro Silicon Furnace, substantially increasing the company's production capacity and operational efficiency.</p>
                   </div>
                 </div>
               </GlassCard>
             </div>
             <div className="mt-8 text-center">
               <div className="inline-block bg-primary/10 border border-primary/20 rounded-lg px-6 py-3">
-                <p className="text-foreground font-medium">
+                <p className="text-foreground font-medium text-justify">
                   With the commissioning of both furnaces, the company strengthened its position as one of Bhutan's growing ferro silicon producers.
                 </p>
               </div>
@@ -247,7 +248,7 @@ export default function About() {
           </div>
           <div className="mt-8 text-center">
             <div className="inline-block bg-primary/5 border border-primary/10 rounded-lg px-6 py-3">
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground text-sm text-justify">
                 The company is committed to creating sustainable employment opportunities while developing technical skills among Bhutanese professionals.
               </p>
             </div>
@@ -356,7 +357,7 @@ export default function About() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="text-center">
             <h2 className="font-display text-3xl md:text-4xl mb-6 text-foreground">Global Reach, Local Commitment</h2>
-            <p className="max-w-2xl mx-auto text-muted-foreground mb-8">
+            <p className="max-w-2xl mx-auto text-muted-foreground mb-8 text-justify">
               While we export our premium Ferro Silicon (FeSi) across the region and beyond, 
               we remain deeply rooted in our community, providing employment and supporting 
               local industrial development in Bhutan.
