@@ -8,7 +8,7 @@ export function Navbar() {
 
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About EDPL' },
+    { href: '/about', label: 'About EDEPL' },
     { href: '/products', label: 'Products' },
     { href: '/announcements', label: 'Announcements' },
     { href: '/careers', label: 'Careers' },
