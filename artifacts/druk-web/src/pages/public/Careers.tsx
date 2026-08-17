@@ -10,7 +10,7 @@ export default function Careers() {
   const { data: careers, isLoading } = useCareers(true);
 
   // Google Form URL with the correct entry ID for position field
-  const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfk_5cAaiLB0Lk-FPAcT1-UZst8nXXIP56ChWCYNWIbid9tnQ/viewform';
+  const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdHmtRcKhWr6rHTyb-nrIA2bGRRgfOUKXqpGbVpdQr3IEZUrQ/viewform?usp=pp_url&entry.42473757=Position';
   const POSITION_ENTRY_ID = 'entry.42473757';
 
   // Filter out expired jobs

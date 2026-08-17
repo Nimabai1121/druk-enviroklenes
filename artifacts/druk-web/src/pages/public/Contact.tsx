@@ -34,7 +34,7 @@ export default function Contact() {
 
   // Web3Forms configuration
   const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
-  const ACCESS_KEY = 'd6ecccca-ec81-49cb-a179-05b21f2a67db';
+  const ACCESS_KEY = '4d17095a-0ab8-4515-a1e3-dd0340c3468e';
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
