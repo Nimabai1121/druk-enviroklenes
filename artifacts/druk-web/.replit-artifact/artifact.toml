@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "Druk Enviroklenes"
+title = "Druk Enviroklens"
 version = "1.0.0"
 id = "artifacts/druk-web"
 router = "path"
