@@ -58,7 +58,7 @@ export function Footer() {
         
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-2">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Druk Enviroklenes Pvt. Ltd. All rights reserved.
+            &copy; {new Date().getFullYear()} Druk Enviroklens Pvt. Ltd. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
             Developed by <span className="text-primary font-medium">Nima T.Tamang</span>
