@@ -376,7 +376,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
               {[
-                { label: "Daily Production", value: "45,000 T" },
+                { label: "Daily Production", value: "90 MT" },
                 { label: "Export Markets", value: "12+" },
                 { label: "Quality Rating", value: "IS 1110: 2023" },
                 { label: "Commissioned", value: "Dec 2025" },
