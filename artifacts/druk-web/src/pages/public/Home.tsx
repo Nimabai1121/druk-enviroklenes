@@ -344,8 +344,8 @@ export default function Home() {
                 </div>
                 
                 <h1 className="font-display text-6xl md:text-8xl leading-[0.9] text-white mb-6 uppercase drop-shadow-xl">
-                  Forging <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-300">Power</span><br />
-                  With Precision.
+                  Production with<br />
+                  Environmental consciousness
                 </h1>
                 
                 {/* Glassmorphism text card */}
