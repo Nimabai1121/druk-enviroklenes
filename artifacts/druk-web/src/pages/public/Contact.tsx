@@ -125,7 +125,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-medium text-foreground mb-1">Email</h3>
-                    <p className="text-muted-foreground">{company?.email || 'contact@drukenviro.bt'}</p>
+                    <p className="text-muted-foreground">{company?.email || 'ict@exalt.bt'}</p>
                   </div>
                 </div>
               </div>

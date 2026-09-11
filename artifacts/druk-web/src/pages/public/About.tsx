@@ -60,14 +60,14 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="font-display text-4xl md:text-6xl uppercase text-foreground mb-4 leading-tight">
+              <h1 className="font-display text-5xl md:text-6xl uppercase text-foreground mb-4 leading-tight">
                 Exalt Druk Enviroklens
               </h1>
               <p className="text-xl md:text-2xl text-primary font-medium mb-2">Private Limited (EDEPL)</p>
               <div className="flex items-center gap-3 mb-4 text-muted-foreground">
                 <MapPin className="h-5 w-5 text-primary shrink-0" />
                 <span>Norbugang Industrial Park (NIP), Samtse, Bhutan</span>
-              </div>
+              </div> 
               <p className="text-muted-foreground leading-relaxed text-justify">
                 Exalt Druk Enviroklens Private Limited is a Bhutanese ferro silicon manufacturing company 
                 located at Norbugang Industrial Park (NIP), Samtse Dzongkhag. The company is engaged in 

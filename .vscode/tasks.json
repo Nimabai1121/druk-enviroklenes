@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Druk Web: Dev",
+      "type": "shell",
+      "command": "corepack",
+      "args": ["pnpm", "dev"],
+      "options": {
+        "cwd": "${workspaceFolder}/artifacts/druk-web"
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Druk Web: Build",
+      "type": "shell",
+      "command": "corepack",
+      "args": ["pnpm", "build"],
+      "options": {
+        "cwd": "${workspaceFolder}/artifacts/druk-web"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Druk Web: Typecheck",
+      "type": "shell",
+      "command": "corepack",
+      "args": ["pnpm", "typecheck"],
+      "options": {
+        "cwd": "${workspaceFolder}/artifacts/druk-web"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
