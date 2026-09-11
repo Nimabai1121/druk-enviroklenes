@@ -443,7 +443,7 @@ export default function Home() {
             <div className="flex justify-between items-end mb-12">
               <div>
                 <h2 className="font-display text-4xl text-foreground mb-2">Industrial Output</h2>
-                <p className="text-muted-foreground">Premium ferroalloys for global markets.</p>
+                <p className="text-muted-foreground">Premium ferro alloys for global markets.</p>
               </div>
               <Button asChild variant="ghost" className="hidden sm:flex text-foreground hover:text-primary">
                 <Link href="/products">View All Catalog <ArrowRight className="ml-2 h-4 w-4" /></Link>
