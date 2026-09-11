@@ -148,10 +148,10 @@ export default function Home() {
               >
                 <h1 className="font-display text-3xl tracking-wide text-foreground">
                   EXALT DRUK ENVIROKLENS 
-              
-                <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground font-medium mt-3">
+              </h1>
+                <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground font-medium mt-3"> <h1 className="font-display text-2xl tracking-wide text-foreground"></h1>
                   Private Limited
-                </h1></p>
+                </p>
               </motion.div>
 
               {/* Loading Dots - Enhanced with staggered entrance */}
