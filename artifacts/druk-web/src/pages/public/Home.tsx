@@ -149,7 +149,7 @@ export default function Home() {
                 <h1 className="font-display text-3xl tracking-wide text-foreground">
                   EXALT DRUK ENVIROKLENS 
               
-                <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground font-medium mt-1">
+                <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground font-medium mt-3">
                   Private Limited
                 </h1></p>
               </motion.div>
