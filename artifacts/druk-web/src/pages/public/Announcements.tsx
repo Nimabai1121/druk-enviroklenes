@@ -22,7 +22,7 @@ export default function Announcements() {
         <div className="mb-12 md:mb-16">
           <h1 className="font-display text-5xl md:text-7xl uppercase text-foreground mb-4">Announcements</h1>
           <p className="text-xl text-muted-foreground">
-            Official news, updates, and milestones from Druk Enviroklenes.
+            Official news, updates, and milestones from Druk Enviroklens.
           </p>
         </div>
 
