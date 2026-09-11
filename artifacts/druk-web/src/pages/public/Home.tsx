@@ -149,6 +149,9 @@ export default function Home() {
                 <h1 className="font-display text-3xl tracking-wide text-foreground">
                   EXALT DRUK ENVIROKLENS
                 </h1>
+                <h1 className="font-display text-3xl tracking-wide text-foreground">
+                  PRIVATE LIMITED
+                </h1>
                 <p className="text-sm uppercase tracking-[0.4em] text-muted-foreground font-medium mt-1">
                   Private Limited
                 </p>
