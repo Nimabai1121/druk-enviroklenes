@@ -30,7 +30,7 @@ export function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="font-display text-2xl tracking-wide leading-none text-foreground">EXALT DRUK ENVIROKLENS</span>
-              <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground font-medium">Private Limited</span>
+              <span className="text-xs uppercase tracking-[0.5em] text-muted-foreground font-medium">Private Limited</span>
             </div>
           </Link>
           
