@@ -402,7 +402,7 @@ export default function Home() {
             >
               <h2 className="font-display text-4xl md:text-5xl mb-6 text-foreground">Uncompromising Quality<br/>From the Himalayas</h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Strategically located in Norbugang, Bhutan's industrial hub, Exalt Druk Enviroklens leverages clean hydroelectric power to produce premium ferroalloys with a reduced carbon footprint.
+                Strategically located in Norbugang, Bhutan's industrial hub, Exalt Druk Enviroklens leverages clean hydroelectric power to produce premium ferro alloys with a reduced carbon footprint.
               </p>
               <ul className="space-y-4 mb-8">
                 {[
