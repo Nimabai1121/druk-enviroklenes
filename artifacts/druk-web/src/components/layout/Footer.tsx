@@ -11,7 +11,7 @@ export function Footer() {
               <div className="w-8 h-8 bg-primary/20 rounded-md flex items-center justify-center border border-primary/30">
                 <Factory className="h-4 w-4 text-primary" />
               </div>
-              <span className="font-display text-xl tracking-wide text-foreground">EXALT DRUK ENVIROKLENS Pvt Ltd</span>
+              <span className="font-display text-xl tracking-wide text-foreground">EXALT DRUK ENVIROKLENS PRIVATE LIMITED</span>
             </Link>
             <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
               Precision smelting and heavy-industry manufacturing based in Bhutan. Forging the industrial future with uncompromising quality.
@@ -41,7 +41,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
-                <span>contact@drukenviro.bt</span>
+                <span>infor@exalt.bt</span>
               </li>
             </ul>
           </div>
@@ -58,7 +58,7 @@ export function Footer() {
         
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-2">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Druk Enviroklens Pvt. Ltd. All rights reserved.
+            &copy; {new Date().getFullYear()} Exalt Druk Enviroklens Private Limited. All rights reserved.
           </p>
         </div>
       </div>
